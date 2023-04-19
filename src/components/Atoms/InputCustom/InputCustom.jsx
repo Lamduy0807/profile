@@ -1,10 +1,11 @@
 import React from "react";
 
-const InputCustom = ({ placeholder, handleChange }) => {
+const InputCustom = ({ placeholder, handleChange, type, name }) => {
   return (
     <input
       onChange={handleChange}
-      type="text"
+      type={type}
+      name={name}
       placeholder={placeholder}
       className="in-cus in-bg"
     ></input>

@@ -17,6 +17,7 @@
       cursor: pointer;
       &:hover {
         background-color: $main;
+        color: white;
         & ~ .icon-button__content {
           opacity: 1;
           right: 27px;

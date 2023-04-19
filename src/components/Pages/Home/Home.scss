@@ -1,10 +1,12 @@
 @include mobile {
   .home {
+    overflow-y: scroll;
     width: 100vw;
     height: 100vh;
     min-width: -webkit-fill-available;
     margin: auto;
     position: relative;
+    padding-bottom: 70px;
     &__back {
       display: none;
     }
@@ -67,6 +69,8 @@
 
 @include tablet {
   .home {
+    overflow-y:unset;
+
     &__back {
       z-index: 1;
       background-color: $main;

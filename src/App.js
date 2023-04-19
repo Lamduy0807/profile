@@ -18,18 +18,18 @@ function App() {
   };
   return (
     <div style={{ height: "auto" }} className={active ? "light" : "dark"}>
+      <ToggleDarkLight
+        active={active}
+        handleChangeActive={_handleChangeActive}
+      />
       <AnimatedPage exitBeforeEnter>
-        <ToggleDarkLight
-          active={active}
-          handleChangeActive={_handleChangeActive}
-        />
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-        <Navigator />
       </AnimatedPage>
+      <Navigator />
     </div>
   );
 }

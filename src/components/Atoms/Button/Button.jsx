@@ -1,8 +1,8 @@
 import React from "react";
 
-const Button = ({ onClick, content, svg }) => {
+const Button = ({ onClick, content, type }) => {
   return (
-    <button onClick={onClick} className="button text">
+    <button type={type} onClick={onClick} className="button text">
       <span>{content}</span>
       <div style={{ color: "white" }} className="button__round">
         <svg

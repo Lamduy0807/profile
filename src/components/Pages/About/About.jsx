@@ -12,7 +12,7 @@ import { INFOR, SKILLS, TIMELINES } from "../../Const/const";
 
 const About = () => {
   const _handleDownload = () => {
-    saveAs("http://localhost:3000/Mycv.pdf", "Mycv.pdf");
+    saveAs(`${window.location.origin}/Mycv.pdf`, "Mycv.pdf");
   };
   return (
     <div className="about">

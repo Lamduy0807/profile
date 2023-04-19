@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Tittle from "../../Atoms/Title/Tittle";
 import Header from "../../Atoms/Header/Header";
 import ContactCard from "../../Atoms/ContactCard/ContactCard";
@@ -9,6 +10,28 @@ import InputCustom from "../../Atoms/InputCustom/InputCustom";
 import TextareaCustom from "../../Atoms/TextareaCustom/TextareaCustom";
 import AnimatedPage from "../Animation/Animation";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    console.log("here");
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nddoqt8",
+        "template_0az0b1w",
+        form.current,
+        "RqAMrFPiiNUbDy_T_"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="contact">
       <Tittle main="Get in" highlight="touch" behind="contact" />
@@ -42,23 +65,38 @@ const Contact = () => {
             </div>
 
             <div className="contact__form col l-8 m-12 c-12">
-              <div className="row">
+              <form ref={form} onSubmit={sendEmail} className="row">
                 <div className="col l-6 m-6 c-12">
-                  <InputCustom placeholder={"Your name"} />
+                  <InputCustom
+                    type="text"
+                    name="user_name"
+                    placeholder={"Your name"}
+                  />
                 </div>
                 <div className="col l-6 m-6 c-12">
-                  <InputCustom placeholder={"Your email"} />
+                  <InputCustom
+                    type="email"
+                    name="user_email"
+                    placeholder={"Your email"}
+                  />
                 </div>
                 <div className="col l-12 m-12 c-12">
-                  <InputCustom placeholder={"Your subject"} />
+                  <InputCustom
+                    type="text"
+                    name="user_subject"
+                    placeholder={"Your subject"}
+                  />
                 </div>
                 <div className="col l-12 m-12 c-12">
-                  <TextareaCustom placeholder={"Your message"} />
+                  <TextareaCustom
+                    name={"message"}
+                    placeholder={"Your message"}
+                  />
                 </div>
                 <div className="col l-12 m-12 c-12">
-                  <Button content={"send message"} />
+                  <Button type={"submit"} content={"send message"} />
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

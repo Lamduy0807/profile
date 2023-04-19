@@ -90,7 +90,7 @@ export const CONTACT = [
   {
     svg: <Add />,
     title: "Address point",
-    content: "Campus A, ward Linh Trung, Thu Duc city, HCMC",
+    content: "Dormitory A - VNU, Linh Trung ward, Thu Duc city, HCMC",
   },
   {
     svg: <Mail />,
