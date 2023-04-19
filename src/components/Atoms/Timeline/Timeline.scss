@@ -1,0 +1,67 @@
+@include mobile {
+  .timeline {
+    position: relative;
+    padding: 0 20px 0 60px;
+    box-sizing: border-box;
+    margin: 0 0 50px;
+    &::after{
+        content: "";
+        border-left: 1px solid #333;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+    }
+    &__icon {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: $main;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    &__time {
+      font-size: 12px;
+      padding: 1px 10px;
+      display: inline-block;
+      margin-bottom: 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      background-color: #252525;
+      opacity: 0.8;
+      font-family: Open Sans, sans-serif;
+      text-transform: uppercase;
+    }
+    &__title {
+      text-transform: uppercase;
+      margin: 7px 0 10px;
+      font-size: 18px;
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      line-height: 1.2;
+      &__location {
+        display: inline-block;
+        position: relative;
+        padding: 0 0 0 26px;
+        &::before {
+          position: absolute;
+          width: 10px;
+          height: 2px;
+          content: "";
+          left: 7px;
+          top: 9px;
+          opacity: 0.8;
+        }
+      }
+    }
+    &__paragraph {
+      font-size: 14px;
+      font-family: Open Sans, sans-serif;
+    }
+  }
+}

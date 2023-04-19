@@ -1,0 +1,30 @@
+@include mobile {
+  .contact {
+    width: 100vw;
+    min-height: 100vh;
+    min-width: -webkit-fill-available;
+    padding: 10px 15px 70px 15px;
+    margin: auto;
+    &__infor {
+      padding: 0 15px;
+    }
+    &__para {
+      font-size: 14px;
+      font-family: Open Sans, sans-serif;
+      margin-bottom: 24px;
+    }
+    &__form {
+      padding-top: 20px;
+      padding-left: 0px !important;
+    }
+  }
+}
+@include tablet {
+  .contact {
+    padding: 10px 15px 0px 15px;
+    &__form {
+      padding-top: 20px;
+      padding-left: 30px !important;
+    }
+  }
+}

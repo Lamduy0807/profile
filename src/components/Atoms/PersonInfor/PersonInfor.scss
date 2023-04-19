@@ -1,0 +1,30 @@
+@include mobile {
+  .person-infor {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+    font-family: Open Sans, sans-serif;
+    &__title {
+      text-transform: capitalize;
+      opacity: 0.8;
+    }
+    &__content {
+      font-weight: 600;
+    }
+  }
+}
+
+@include tablet{
+    .person-infor {
+        flex-direction: row;
+    }
+}
+
+@include desktop{
+    .person-infor {
+        flex-direction: row;
+    }
+}

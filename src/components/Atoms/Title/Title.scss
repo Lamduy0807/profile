@@ -1,0 +1,51 @@
+@include mobile {
+  .title {
+    width: auto;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__behind {
+      font-size: 56px;
+      letter-spacing: 10px;
+      color: #efefef;
+      line-height: 0.7;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin: 0;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    &__main {
+      z-index: 999;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #666;
+      font-size: 45px;
+      text-transform: uppercase;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 900;
+      width: 100%;
+      span{
+        color: $main;
+      }
+    }
+  }
+}
+@include tablet{
+    .title {
+        &__behind {
+            font-size: 110px;
+        }
+        &__main{
+            font-size: 56px;
+        }
+    }
+}

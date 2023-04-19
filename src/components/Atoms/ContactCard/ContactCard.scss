@@ -1,0 +1,31 @@
+@include mobile {
+  .contact-card {
+    font-weight: 600;
+    padding-left: 50px;
+    line-height: 25px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    font-family: Open Sans, sans-serif;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      font-size: 33px;
+    }
+    &__title {
+      text-transform: uppercase;
+      opacity: 0.8;
+      font-weight: 400;
+      padding-bottom: 0;
+      font-size: 15px;
+      line-height: 25px;
+    }
+    &__para {
+      font-weight: 600;
+      padding-bottom: 0;
+      line-height: 25px;
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./base.scss";
+
+@import "../components/Atoms/Button/Button.scss";
+@import "../components/Atoms/IconButton/IconButton.scss";
+@import "../components/Atoms/Title/Title.scss";
+@import "../components/Atoms/ToggleDarkLight/ToggleDarkLight.scss";
+@import "../components/Atoms/ExperienceCard/ExperienceCard.scss";
+@import "../components/Atoms/PersonInfor/PersonInfor.scss";
+@import "../components/Atoms/BarChart/BarChart.scss";
+@import "../components/Atoms/Header/Header.scss";
+@import "../components/Atoms/Timeline/Timeline.scss";
+@import "../components/Atoms/ContactCard/ContactCard.scss";
+@import "../components/Atoms/RoundIcon/RoundIcon.scss";
+@import "../components/Atoms/InputCustom/InputCustom.scss";
+@import "../components/Atoms/TextareaCustom/TextareaCustom.scss";
+@import "../components/Modules/Navigator/Navigator.scss";
+
+@import "../components/Pages/Home/Home.scss";
+@import "../components/Pages/About/About.scss";
+@import "../components/Pages/Contact/Contact.scss";

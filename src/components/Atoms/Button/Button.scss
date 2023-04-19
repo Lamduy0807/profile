@@ -1,0 +1,53 @@
+@include mobile {
+  .button {
+    min-width: 220px;
+    position: relative;
+    background: none;
+    border: solid 2px $main;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 16px 70px 16px 35px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1;
+    transition: all 0.25s ease-in-out;
+    font-weight: 600;
+    text-transform: uppercase;
+    max-height: 55px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $main;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: all 0.3s ease-out;
+      transform: translateX(100%);
+    }
+    &:hover {
+      color: #fff;
+      &::before {
+        transform: translateX(0);
+        transition: all 0.3s ease-out;
+      }
+    }
+    &__round {
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      right: -2px;
+      top: -2px;
+      border-radius: 50%;
+      background-color: $main;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@include mobile {
+  .ex-card {
+    padding: 15px 20px 20px 25px;
+    border-radius: 5px;
+    border: 1px solid #252525;
+    width: auto;
+    box-sizing: border-box;
+    &__container {
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    &__number-container {
+      display: flex;
+      color: $main;
+    }
+    &__number {
+      font-size: 40px;
+      font-weight: 700;
+      font-family: Poppins, sans-serif;
+    }
+    &__plus {
+      font-size: 33px;
+      font-weight: 300;
+    }
+    &__content {
+      font-size: 15px;
+      font-family: Open Sans, sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+@include tablet {
+  .ex-card {
+    padding: 20px 30px 25px 40px;
+    &__number {
+      font-size: 50px;
+    }
+    &__content {
+      padding-left: 45px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: #777;
+        top: 0;
+        left: 7px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .ex-card {
+    padding: 20px 30px 25px 40px;
+    &__number {
+      font-size: 50px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      gap: 1%;
+      &::before {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: #777;
+        margin-top: 13px;
+      }
+    }
+  }
+}

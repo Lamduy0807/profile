@@ -1,0 +1,13 @@
+@include mobile {
+  .text-cus {
+    width: 100%;
+    padding: 12px 26px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 30px;
+    outline: none !important;
+    transition: 0.3s;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}

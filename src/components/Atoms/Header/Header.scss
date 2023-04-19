@@ -1,0 +1,13 @@
+@include mobile {
+  .header {
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+}
+@include tablet {
+  .header {
+    font-size: 26px;
+  }
+}

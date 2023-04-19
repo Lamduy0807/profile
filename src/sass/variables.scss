@@ -1,0 +1,32 @@
+$main: #da9900;
+$text-main: #fff;
+$text-primary: #4e4d93;
+$text-purple: #726e8d;
+$text-normal: #737373;
+$border-grey: #ebe8f4;
+
+// $main: #2a254b;
+// $text-main: #22202e;
+// $text-primary: #5b5676;
+// $text-purple: #726e8d;
+// $text-normal: #737373;
+
+// Figma variables colors
+$DarkPrimaryColor: #2a254b;
+$PrimaryColor: #4e4d93;
+$LightGreyColor: #f9f9f9;
+$WhiteColor: #ffffff;
+$BorderDarkColor: #cac6da;
+$textcolor: #666666;
+$black: #000;
+
+// Font import
+@import url("http://fonts.cdnfonts.com/css/clash-display");
+@import url("http://fonts.cdnfonts.com/css/satoshi");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+* sizes
+*/
+$mobile-width: 320px;
+$tablet-width: 940px;
+$desktop-width: 1024px;
