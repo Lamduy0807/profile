@@ -117,4 +117,8 @@ export const LINK = [
     icon: "simple-icons:zalo",
     href: "https://zalo.me/0901091872",
   },
+  {
+    icon: "akar-icons:github-fill",
+    href: "https://github.com/Lamduy0807",
+  },
 ];

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Tittle from "../../Atoms/Title/Tittle";
 import Header from "../../Atoms/Header/Header";
@@ -9,11 +9,13 @@ import Button from "../../Atoms/Button/Button";
 import InputCustom from "../../Atoms/InputCustom/InputCustom";
 import TextareaCustom from "../../Atoms/TextareaCustom/TextareaCustom";
 import AnimatedPage from "../Animation/Animation";
+import Popup from "../../Modules/Popup/Popup";
 const Contact = () => {
   const form = useRef();
+  const [open, setOpen] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
-    console.log("here");
     e.preventDefault();
 
     emailjs
@@ -25,83 +27,96 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setSuccess(true);
+          setOpen(true);
         },
         (error) => {
-          console.log(error.text);
+          setSuccess(false);
+          setOpen(true);
         }
       );
   };
+  const handleOpen = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
-    <div className="contact">
-      <Tittle main="Get in" highlight="touch" behind="contact" />
-      <AnimatedPage>
-        <div className="grid wide">
-          <div style={{ boxSizing: "border-box" }} className="row">
-            <div className="contact__infor col l-4 m-12 c-12">
-              <Header content={"Feel free to contact"} />
-              <p className="contact__para text">
-                Feel free to keep in touch with me. I am open to discuss new
-                projects, creative ideas or oppoturnities to be part of your
-                vision.
-              </p>
-              {CONTACT.map((item, index) => {
-                return (
-                  <ContactCard
-                    key={index}
-                    svg={item.svg}
-                    title={item.title}
-                    content={item.content}
-                  />
-                );
-              })}
-              <div style={{ display: "flex" }}>
-                {LINK.map((item, index) => {
+    <>
+      <Popup isOpen={open} setOpen={handleOpen} isSuccess={success} />
+      <div className="contact">
+        <Tittle main="Get in" highlight="touch" behind="contact" />
+        <AnimatedPage>
+          <div className="grid wide">
+            <div style={{ boxSizing: "border-box" }} className="row">
+              <div className="contact__infor col l-4 m-12 c-12">
+                <Header content={"Feel free to contact"} />
+                <p className="contact__para text">
+                  Feel free to keep in touch with me. I am open to discuss new
+                  projects, creative ideas or oppoturnities to be part of your
+                  vision.
+                </p>
+                {CONTACT.map((item, index) => {
                   return (
-                    <RoundIcon key={index} icon={item.icon} href={item.href} />
+                    <ContactCard
+                      key={index}
+                      svg={item.svg}
+                      title={item.title}
+                      content={item.content}
+                    />
                   );
                 })}
+                <div style={{ display: "flex" }}>
+                  {LINK.map((item, index) => {
+                    return (
+                      <RoundIcon
+                        key={index}
+                        icon={item.icon}
+                        href={item.href}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="contact__form col l-8 m-12 c-12">
+                <form ref={form} onSubmit={sendEmail} className="row">
+                  <div className="col l-6 m-6 c-12">
+                    <InputCustom
+                      type="text"
+                      name="user_name"
+                      placeholder={"Your name"}
+                    />
+                  </div>
+                  <div className="col l-6 m-6 c-12">
+                    <InputCustom
+                      type="email"
+                      name="user_email"
+                      placeholder={"Your email"}
+                    />
+                  </div>
+                  <div className="col l-12 m-12 c-12">
+                    <InputCustom
+                      type="text"
+                      name="user_subject"
+                      placeholder={"Your subject"}
+                    />
+                  </div>
+                  <div className="col l-12 m-12 c-12">
+                    <TextareaCustom
+                      name={"message"}
+                      placeholder={"Your message"}
+                    />
+                  </div>
+                  <div className="col l-12 m-12 c-12">
+                    <Button type={"submit"} content={"send message"} />
+                  </div>
+                </form>
               </div>
             </div>
-
-            <div className="contact__form col l-8 m-12 c-12">
-              <form ref={form} onSubmit={sendEmail} className="row">
-                <div className="col l-6 m-6 c-12">
-                  <InputCustom
-                    type="text"
-                    name="user_name"
-                    placeholder={"Your name"}
-                  />
-                </div>
-                <div className="col l-6 m-6 c-12">
-                  <InputCustom
-                    type="email"
-                    name="user_email"
-                    placeholder={"Your email"}
-                  />
-                </div>
-                <div className="col l-12 m-12 c-12">
-                  <InputCustom
-                    type="text"
-                    name="user_subject"
-                    placeholder={"Your subject"}
-                  />
-                </div>
-                <div className="col l-12 m-12 c-12">
-                  <TextareaCustom
-                    name={"message"}
-                    placeholder={"Your message"}
-                  />
-                </div>
-                <div className="col l-12 m-12 c-12">
-                  <Button type={"submit"} content={"send message"} />
-                </div>
-              </form>
-            </div>
           </div>
-        </div>
-      </AnimatedPage>
-    </div>
+        </AnimatedPage>
+      </div>
+    </>
   );
 };
 

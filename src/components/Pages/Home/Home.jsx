@@ -18,7 +18,7 @@ const Home = () => {
           <div className="home__text-container">
             <div className="home__title">
               <div className="">
-                <h1 className="color-main">I'm Lam Duy.</h1>
+                <h1 className="color-main">I'm Duy Lam</h1>
                 <h1 className="text">Web Developer</h1>
               </div>
             </div>

@@ -6,7 +6,7 @@
     min-width: -webkit-fill-available;
     margin: auto;
     position: relative;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
     &__back {
       display: none;
     }
@@ -70,7 +70,7 @@
 @include tablet {
   .home {
     overflow-y:unset;
-
+    margin-bottom: 0px;
     &__back {
       z-index: 1;
       background-color: $main;

@@ -1,0 +1,72 @@
+@include mobile {
+  .popup {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+      position: relative;
+      color: white;
+      width: 30%;
+      height: 30%;
+      min-width: 300px;
+      background-color: white;
+      border-radius: 5px;
+    }
+    &__btn {
+      position: absolute;
+      top: -55px;
+      right: 0;
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px white solid;
+      cursor: pointer;
+    }
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 50%;  
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 75px;
+        gap: 10px;
+        padding: 0 10px;
+        span {
+          font-size: 15px;
+          text-align: center;
+        }
+    }
+  }
+}
+@include tablet {
+  .popup {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000000;
+    &__content {
+      font-size: 96px;
+      padding: 0 15px;
+      span {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
