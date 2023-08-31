@@ -21,6 +21,12 @@ export const SKILLS = [
 
 export const TIMELINES = [
   {
+    time: "2023 - present",
+    title: "Software Developer",
+    location: "Manifera Vietnam Co. Ltd,",
+    para: "Working as front-end developer in Manifera Software",
+  },
+  {
     time: "2017 - 2023",
     title: "Software Engineering diploma",
     location: "UIT",

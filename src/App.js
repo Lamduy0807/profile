@@ -1,9 +1,6 @@
 import Home from "./components/Pages/Home/Home";
 import ToggleDarkLight from "./components/Atoms/ToggleDarkLight/ToggleDarkLight";
 import { useState } from "react";
-import ExperienceCard from "./components/Atoms/ExperienceCard/ExperienceCard";
-import PersonInfor from "./components/Atoms/PersonInfor/PersonInfor";
-import BarChart from "./components/Atoms/BarChart/BarChart";
 import About from "./components/Pages/About/About";
 import Contact from "./components/Pages/Contact/Contact";
 import Navigator from "./components/Modules/Navigator/Navigator";

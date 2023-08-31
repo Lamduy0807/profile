@@ -13,7 +13,7 @@ const Home = () => {
         <div className="home__back"></div>
         <div className="home__content">
           <div className="home__image-container">
-            <img src={require("../../../Image/avt.jpg")} />
+            <img alt="avatar" src={require("../../../Image/avt.jpg")} />
           </div>
           <div className="home__text-container">
             <div className="home__title">
