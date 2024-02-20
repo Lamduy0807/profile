@@ -12,7 +12,7 @@ import { INFOR, SKILLS, TIMELINES } from "../../Const/const";
 
 const About = () => {
   const _handleDownload = () => {
-    saveAs(`${window.location.origin}/lam-nguyen-buu-duy-software-dev.pdf`, "mycvnew.pdf");
+    saveAs(`${window.location.origin}/lam-nguyen-buu-duy-software-dev.pdf`, "lam-nguyen-buu-duy-software-dev.pdf");
   };
   return (
     <div className="about">
