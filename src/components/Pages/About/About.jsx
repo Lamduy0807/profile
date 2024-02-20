@@ -12,7 +12,7 @@ import { INFOR, SKILLS, TIMELINES } from "../../Const/const";
 
 const About = () => {
   const _handleDownload = () => {
-    saveAs(`${window.location.origin}/Mycv.pdf`, "Mycv.pdf");
+    saveAs(`${window.location.origin}/lam-nguyen-buu-duy-software-dev.pdf`, "mycvnew.pdf");
   };
   return (
     <div className="about">
@@ -39,7 +39,7 @@ const About = () => {
               <div className="about__basic about__card-container">
                 <div className="about__basic__col about__basic__spc">
                   <ExperienceCard
-                    number={6}
+                    number={11}
                     content={"months of"}
                     content1={"experiences"}
                   />

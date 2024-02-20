@@ -1,6 +1,6 @@
 import Home from "./components/Pages/Home/Home";
 import ToggleDarkLight from "./components/Atoms/ToggleDarkLight/ToggleDarkLight";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import About from "./components/Pages/About/About";
 import Contact from "./components/Pages/Contact/Contact";
 import Navigator from "./components/Modules/Navigator/Navigator";
